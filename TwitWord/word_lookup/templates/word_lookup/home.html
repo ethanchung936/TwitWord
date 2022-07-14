@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Example</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'word_lookup/style.css' %}">
+        <title>TwitWord</title>
     </head>
     <body>
-        <p>Hello world!</p>
+        <div class="header">
+            <h1>Welcome</h1>
+        </div>
+            <form id="content">
+                <input id="word" type="text" name="word" placeholder="Enter a word">
+                <input id="submit" type="submit" value="Submit">
+            </form>
     </body>
 </html>

@@ -1,0 +1,40 @@
+.header {
+    padding: 60px;
+    text-align: center;
+    color: rgb(62, 164, 228);
+    font-size: 30px;
+  }
+
+#content {
+    text-align: center;
+}
+
+#word {
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 3px solid rgb(62, 164, 228);
+    border-radius: 4px;
+    align-items: center;
+    font-size: 16px;
+  }
+
+#word:focus {
+    background-color: rgb(171, 220, 250);
+}
+
+#submit {
+    width: 100px;
+    background-color: rgb(62, 164, 228);
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#submit:hover {
+    background-color: rgb(53, 142, 197);
+}
