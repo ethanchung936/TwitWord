@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Load the style sheet with django -->
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'word_lookup/style.css' %}">
         <title>TwitWord</title>
     </head>
     <body>
+        <!-- Webpage title -->
         <div class="header">
             <h1>Welcome</h1>
+        <!-- Form to input a word -->
         </div>
-            <form id="content">
+            <form id="content" action="word_input" method="post">
                 <input id="word" type="text" name="word" placeholder="Enter a word">
                 <input id="submit" type="submit" value="Submit">
             </form>
