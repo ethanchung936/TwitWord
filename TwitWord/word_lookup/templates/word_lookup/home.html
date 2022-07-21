@@ -4,6 +4,7 @@
         <!-- Load the style sheet with django -->
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'word_lookup/style.css' %}">
+        <link rel="stylesheet" href="{% static 'word_lookup/scripts.js' %}">
         <title>TwitWord</title>
     </head>
     <body>
@@ -12,9 +13,11 @@
             <h1>Welcome</h1>
         <!-- Form to input a word -->
         </div>
-            <form id="content" action="word_input" method="post">
-                <input id="word" type="text" name="word" placeholder="Enter a word">
+            <form id="content" action="hello/" method="post">
+                {% csrf_token %}
+                <input id="text_field" type="text" name="word" placeholder="Enter a word" maxlength="100">
                 <input id="submit" type="submit" value="Submit">
             </form>
+            
     </body>
 </html>
