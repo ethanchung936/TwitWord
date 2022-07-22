@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # my applications
-    'word_lookup.apps.WordLookupConfig',
+    'word_lookup',
 ]
 
 MIDDLEWARE = [
