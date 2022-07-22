@@ -13,7 +13,7 @@
             <h1>Welcome</h1>
         <!-- Form to input a word -->
         </div>
-            <form id="content" action="hello/" method="post">
+            <form id="content" method="post">
                 {% csrf_token %}
                 <input id="text_field" type="text" name="word" placeholder="Enter a word" maxlength="100">
                 <input id="submit" type="submit" value="Submit">

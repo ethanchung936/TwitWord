@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Load the style sheet with django -->
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'word_lookup/style.css' %}">
+        <title>TwitWord</title>
+    </head>
+    <body>
+        <!-- Webpage title -->
+        <div class="header">
+            <h1>
+                {{ word }}
+            </h1>
+        <!-- Form to input a word -->
+        </div>
+    </body>
+</html>
