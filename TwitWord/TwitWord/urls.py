@@ -20,6 +20,5 @@ from django.views.generic import RedirectView
 urlpatterns = [
     path('admin/', admin.site.urls),
     # The home page for TwitWord, automatically redirects to this extension
-    path('home/', include('word_lookup.urls')),
-    path('', RedirectView.as_view(url='home/', permanent=True)),
+    path('', include('word_lookup.urls')),
 ]

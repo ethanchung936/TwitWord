@@ -2,8 +2,9 @@ from django.urls import path
 
 from . import views
 
-# The home view
 urlpatterns = [
+    # The home view
     path('', views.home, name='home'),
+    # The word view
     path('<word>/', views.word_input, name='word_input'),
 ]
