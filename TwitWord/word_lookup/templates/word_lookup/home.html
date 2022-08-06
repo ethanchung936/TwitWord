@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <!-- Load the style sheet with django -->
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'word_lookup/style.css' %}">
-        <link rel="stylesheet" href="{% static 'word_lookup/scripts.js' %}">
+        <link rel="icon" type="image/png" href="{% static 'word_lookup/TwitWord_favicon.ico' %}">
         <title>TwitWord</title>
     </head>
     <body>
-        <!-- Webpage title -->
-        <div class="header">
-            <h1>Welcome</h1>
-        <!-- Form to input a word -->
+        <div class="vertical-center">
+            <!-- Page title -->
+            <div class="header">
+                <h1>TwitWord</h1>
+            </div>
+            <!-- Form to input a word -->
+                <form id="content" method="post">
+                    {% csrf_token %}
+                    <input id="text_field" type="text" name="user_input" placeholder="Enter a word" maxlength="100">
+                    <input id="submit" type="submit" value="Submit">
+                </form> 
         </div>
-            <form id="content" method="post">
-                {% csrf_token %}
-                <input id="text_field" type="text" name="word" placeholder="Enter a word" maxlength="100">
-                <input id="submit" type="submit" value="Submit">
-            </form>
-            
+        <!-- Page info -->
+        <p id="explanation">Type in a word to view tweets that contain it!</p>
+        </div>
     </body>
 </html>
