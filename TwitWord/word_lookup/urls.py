@@ -6,5 +6,5 @@ urlpatterns = [
     # The home view
     path('', views.home, name='home'),
     # The word view
-    path('<word>/', views.word_input, name='word_input'),
+    path('tweets/<user_id>', views.word_input, name='word_input'),
 ]
