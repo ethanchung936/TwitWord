@@ -46,8 +46,3 @@ def get_ids(tweets):
             right_tweets.append(emb_tweet)
         i += 1
     return left_tweets, right_tweets
-
-
-t = get_tweets('#yes')
-h = get_ids(t)
-print(h)
