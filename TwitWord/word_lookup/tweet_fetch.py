@@ -20,7 +20,7 @@ def get_tweets(keyword):
         a list of tweet objects
     '''
     query = '"{}" -filter:retweets -filter:replies lang:en'.format(keyword)
-    tweets = api.search_tweets(query, tweet_mode = 'extended', count = 4)
+    tweets = api.search_tweets(query, tweet_mode = 'extended', count = 10)
     return tweets
 
 def get_ids(tweets):
@@ -36,13 +36,15 @@ def get_ids(tweets):
     right_tweets = []
     i = 0
     for tweet in tweets:
-        twt_http = requests.get('https://publish.twitter.com/oembed?url=https://twitter.com/twitter/status/' + tweet.id_str + '&dnt=false&maxwidth=180&maxheight=200')
-        twtjson = twt_http.json()
-        emb_tweet = twtjson.get('html')
-        # sort into two lists
-        if i // 2 == 0:
-            left_tweets.append(emb_tweet)
-        else:
-            right_tweets.append(emb_tweet)
-        i += 1
+        if i <= 5:
+            twt_http = requests.get('https://publish.twitter.com/oembed?url=https://twitter.com/twitter/status/' + tweet.id_str + '&dnt=false&maxwidth=180&maxheight=200')
+            twtjson = twt_http.json()
+            emb_tweet = twtjson.get('html')
+            # sort into two lists
+            if i % 2 == 0:
+                left_tweets.append(emb_tweet)
+            elif i % 2 == 1:
+                right_tweets.append(emb_tweet)
+            i += 1
+            print(i)
     return left_tweets, right_tweets
