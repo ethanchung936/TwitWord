@@ -61,11 +61,8 @@
 }
 
 #explanation {
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   font-family: Helvetica;
   text-align: center;
-  /* top: 70%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); */
+  margin-top: 3vw;
 }
