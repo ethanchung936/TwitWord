@@ -20,7 +20,7 @@ def get_tweets(keyword):
         a list of tweet objects
     '''
     query = '"{}" -filter:retweets -filter:replies lang:en'.format(keyword)
-    tweets = api.search_tweets(query, tweet_mode = 'extended', count = 10)
+    tweets = api.search_tweets(query, count = 10)
     return tweets
 
 def get_ids(tweets):
@@ -46,5 +46,4 @@ def get_ids(tweets):
             elif i % 2 == 1:
                 right_tweets.append(emb_tweet)
             i += 1
-            print(i)
     return left_tweets, right_tweets
