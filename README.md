@@ -1,2 +1,2 @@
-# Tweet_Counter
-A website that counts the number of times someone has tweeted a word
+# TwitWord
+A website that allows the user to enter a word then shows them a series of embedded tweets that contain the word.
