@@ -2,8 +2,10 @@ import tweepy as tw
 import requests
 
 # Twitter API key and API secret
-my_api_key = "vhtMACAJiuqAOBHlGtGQkOQzw"
-my_api_secret = "Q2f3umR9davc18AmdGYPd0QQbgduDJgN3DUGLwI7QmH0rdoMlw"
+keys = open("word_lookup/api_keys.txt", "r")
+my_api_key = keys.readline().strip()
+my_api_secret = keys.readline().strip()
+keys.close()
 
 # authenticate
 auth = tw.OAuth2AppHandler(my_api_key, my_api_secret)
