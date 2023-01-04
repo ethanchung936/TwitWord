@@ -134,3 +134,4 @@ dmypy.json
 
 # API keys
 API_keys.txt
+settings.py
